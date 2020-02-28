@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Stepper Form</title>
+</head>
+<body>
+	<div class="stepper-form-container">
+		<h4 style="text-align: center;">LOGIN</h4>
+		<div class="stepper-form">
+			<form action="#">
+				<div class="stepper-label" data-label="1">
+					<div class="stepper-number">
+						<span>1</span>
+					</div>
+					<div class="stepper-text">
+						<h4>Step 1</h4>
+						<p>Enter Your Email</p>
+					</div>
+				</div>
+				<div class="stepper-value" data-value="1">
+					<div class="input-field">
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+					<div class="next-step">
+						<a class="waves-effect waves-light btn continue" data-current="1">Continue</a>
+					</div>
+				</div>
+				<div class="stepper-label" data-label="2">
+					<div class="stepper-number">
+						<span>2</span>
+					</div>
+					<div class="stepper-text">
+						<h4>Step 2</h4>
+						<p>Enter Your Password</p>
+					</div>
+				</div>
+				<div class="stepper-value" data-value="2">
+					<div class="input-field">
+						<input id="password" type="password" class="validate">
+						<label for="password">Password</label>
+					</div>
+					<div class="next-step">
+						<a class="waves-effect waves-light btn continue" data-current="2">Continue</a>
+						<a class="waves-effect waves-light btn back" data-current="2">Back</a>
+					</div>
+				</div>
+				<div class="stepper-label" data-label="3">
+					<div class="stepper-number">
+						<span>3</span>
+					</div>
+					<div class="stepper-text">
+						<h4>Step 3</h4>
+						<p>Finish!!</p>
+					</div>
+				</div>
+				<div class="stepper-value" data-value="3">
+					<div class="next-step">
+						<button class="btn waves-effect waves-light submit" type="submit" name="action">Submit</button>
+						<a class="waves-effect waves-light btn back" data-current="3">Back</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>
