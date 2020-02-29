@@ -57,6 +57,11 @@
 	color: white;
 }
 
+.stepper-text {
+	display: flex;
+	align-items: center;
+}
+
 .stepper-text h4 {
 	font-size: 1.75rem;
 	margin: 0;

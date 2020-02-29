@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="stepper-form-container">
-		<h4 style="text-align: center;">LOGIN</h4>
+		<h4 style="text-align: center;">Resgiter</h4>
 		<div class="stepper-form">
 			<form action="#">
 				<div class="stepper-label" data-label="1">
@@ -17,14 +17,17 @@
 						<span>1</span>
 					</div>
 					<div class="stepper-text">
-						<h4>Step 1</h4>
-						<p>Enter Your Email</p>
+						<h4>Basic Details</h4>
 					</div>
 				</div>
 				<div class="stepper-value" data-value="1">
 					<div class="input-field">
-						<input id="email" type="email" class="validate">
-						<label for="email">Email</label>
+						<input id="fname" type="text" class="validate">
+						<label for="fname">First Name</label>
+					</div>
+					<div class="input-field">
+						<input id="lname" type="text" class="validate">
+						<label for="lname">Last Name</label>
 					</div>
 					<div class="next-step">
 						<a class="waves-effect waves-light btn continue" data-current="1">Continue</a>
@@ -35,11 +38,14 @@
 						<span>2</span>
 					</div>
 					<div class="stepper-text">
-						<h4>Step 2</h4>
-						<p>Enter Your Password</p>
+						<h4>Credentials</h4>
 					</div>
 				</div>
 				<div class="stepper-value" data-value="2">
+					<div class="input-field">
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
 					<div class="input-field">
 						<input id="password" type="password" class="validate">
 						<label for="password">Password</label>
@@ -54,8 +60,7 @@
 						<span>3</span>
 					</div>
 					<div class="stepper-text">
-						<h4>Step 3</h4>
-						<p>Finish!!</p>
+						<h4>Submit</h4>
 					</div>
 				</div>
 				<div class="stepper-value" data-value="3">
