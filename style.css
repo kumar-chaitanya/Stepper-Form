@@ -64,13 +64,12 @@
 
 .stepper-value {
 	margin-left: 50px;
-	max-height: 100px;
-	transform: scaleY(1);
+	max-height: 0px;
+	transform: scaleY(0);
 	transform-origin: top;
 	transition: all 250ms ease-in-out;
 }
 
-.stepper-value.hidden {
-	max-height: 0;
-	transform: scaleY(0);
+.stepper-value.open {
+	transform: scaleY(1);
 }
