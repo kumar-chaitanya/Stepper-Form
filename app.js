@@ -3,12 +3,18 @@ const backBtns = document.querySelectorAll('.back');
 const values = document.querySelectorAll('[data-value]');
 const numSpans = document.querySelectorAll('.stepper-number span');
 
-// Initially all value divs are hidden except the first
-values.forEach((valueDiv) => {
-	valueDiv.classList.add('hidden');
-});
+function open(elem) {
+	let height = elem.scrollHeight;
+	elem.style.maxHeight = `${height}px`;
+}
 
-values[0].classList.remove('hidden');
+function close(elem) {
+	elem.style.maxHeight = null;
+}
+
+// Initially all value divs are hidden except the first
+open(values[0]);
+values[0].classList.add('open');
 
 // Setting all step numbers to have grey bg's except the first
 numSpans.forEach((span) => {
@@ -21,8 +27,10 @@ numSpans[0].style.background = '#26a69a';
 continueBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {
 		let stepValue = parseInt(btn.getAttribute([ 'data-current' ]));
-		values[stepValue - 1].classList.add('hidden');
-		values[stepValue].classList.remove('hidden');
+		values[stepValue - 1].classList.remove('open');
+		close(values[stepValue - 1]);
+		values[stepValue].classList.add('open');
+		open(values[stepValue]);
 		numSpans[stepValue].style.background = '#26a69a';
 	});
 });
@@ -30,8 +38,10 @@ continueBtns.forEach((btn) => {
 backBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {
 		let stepValue = parseInt(btn.getAttribute([ 'data-current' ]));
-		values[stepValue - 1].classList.add('hidden');
+		values[stepValue - 1].classList.remove('open');
+		close(values[stepValue - 1]);
 		numSpans[stepValue - 1].style.background = 'rgba(0,0,0,0.4)';
-		values[stepValue - 2].classList.remove('hidden');
+		values[stepValue - 2].classList.add('open');
+		open(values[stepValue - 2]);
 	});
 });
