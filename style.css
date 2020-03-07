@@ -25,10 +25,10 @@
 .stepper-form::before {
 	content: '';
 	position: absolute;
-	height: 65%;
+	height: 66%;
 	width: 2px;
 	background: rgba(0, 0, 0, 0.2);
-	top: 18%;
+	top: 15%;
 	left: 20px;
 	z-index: 0;
 }
